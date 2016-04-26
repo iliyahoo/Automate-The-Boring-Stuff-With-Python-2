@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+
+def comma_code(spam):
+    string = ''
+    for i in range(len(spam)):
+        if i == len(spam) - 2:
+            push = ' and '
+        elif i == len(spam) - 1:
+            push = ''
+        else:
+            push = ', '
+        string += spam[i] + push
+    return string
+
+print(comma_code(spam))
